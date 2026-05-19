@@ -108,14 +108,14 @@ function App() {
             <button 
               className={`btn ${activeTab === 'cart' ? 'btn-primary' : ''}`}
               onClick={() => setActiveTab('cart')}
-              style={{ flex: 1, backgroundColor: activeTab !== 'cart' && 'rgba(255,255,255,0.1)' }}
+              style={{ flex: 1, backgroundColor: activeTab !== 'cart' ? 'rgba(0,0,0,0.05)' : undefined, color: activeTab !== 'cart' ? 'var(--color-text-muted)' : undefined }}
             >
               <ShoppingCart size={18} /> 現在のカート ({cartItems.length})
             </button>
             <button 
               className={`btn ${activeTab === 'saved' ? 'btn-primary' : ''}`}
               onClick={() => setActiveTab('saved')}
-              style={{ flex: 1, backgroundColor: activeTab !== 'saved' && 'rgba(255,255,255,0.1)' }}
+              style={{ flex: 1, backgroundColor: activeTab !== 'saved' ? 'rgba(0,0,0,0.05)' : undefined, color: activeTab !== 'saved' ? 'var(--color-text-muted)' : undefined }}
             >
               <Archive size={18} /> 保存済みリスト ({savedCarts.length})
             </button>
