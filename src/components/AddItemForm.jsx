@@ -31,6 +31,9 @@ const AddItemForm = ({ onAdd }) => {
     if (urlInfo) {
       setTitle(urlInfo.title || '');
       setImageUrl(urlInfo.image || '');
+      if (urlInfo.price) {
+        setPrice(urlInfo.price);
+      }
     }
     
     setIsLoading(false);
