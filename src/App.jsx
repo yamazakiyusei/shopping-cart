@@ -99,9 +99,11 @@ function App() {
       </header>
 
       <main className="main-grid">
-        <div className="main-content">
+        <div className="sidebar">
           <AddItemForm onAdd={handleAddToCart} />
-          
+        </div>
+        
+        <div className="main-content">
           <div className="tabs" style={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
             <button 
               className={`btn ${activeTab === 'cart' ? 'btn-primary' : ''}`}

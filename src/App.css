@@ -30,7 +30,13 @@
 
 @media (min-width: 768px) {
   .main-grid {
-    grid-template-columns: 1fr 350px;
+    grid-template-columns: 350px 1fr;
+    align-items: start;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 2rem;
   }
 }
 
